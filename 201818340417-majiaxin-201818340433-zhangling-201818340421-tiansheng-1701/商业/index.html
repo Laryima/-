@@ -1,0 +1,551 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<title>商业</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css" />
+	<script src="java/echarts.js"></script>
+</head>
+
+<body>
+	<!--导航头-->
+<header class="header" id="header">
+    <div class="header_wrap">
+        <div class="header_logo"><a id="top">疫情下的中国</a></div>
+        <nav class="header_nav">
+            <a href="../index.html" class="header_nav-item">首页</a>
+           <a href="../农业/index.html" class="header_nav-item">农业</a>
+            <a href="../工业/index.html"  class="header_nav-item">工业</a>
+            <a href="index.html" class="header_nav-item">商业</a>
+            <a href="../登录/登录.html" class="header_nav-item header_nav-item_custom_button">登录</a>
+        </nav>
+    </div>
+</header>
+ <script type="text/javascript">
+	window.onscroll=function(){
+		var top=document.documentElement.scrollTop;
+		var heade=document.getElementById("header");
+		var items=document.getElementsByClassName("header_nav-item");//获取全部的eader_nav-item
+		// 通过JS为heade和全部的item加上和去除样式
+		if(top>70){//加上的样式
+		   heade.classList.add("header_status_black");
+		   for (var i = 0; i < items.length; i++) {
+		   	items[i].classList.add("item_color"); 
+		   }
+		}else{//清除加上的样式
+		   heade.classList.remove("header_status_black");  
+		    for (var i = 0; i < items.length; i++) {
+		   	items[i].classList.remove("item_color"); 
+		   }
+		}
+	}
+</script>
+	<div class="main">                                                          
+		<section class="list-item">
+		  <div class="item-image">                                                
+			<img src="img/image1.jpg" alt="img-1">                                 
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+			<div class="text-title">（一）新冠危机中的在线教育</div>
+			<p class="text">线上渗透率快速提升，中低线城市在线教育市场前景广阔。一方面，获客成本降低以及被拉长的寒假等外部条件为在线教育玩家带来了良好的发展契机。另一方面，多数线下教育机构“被线上”，在疫情防控期间尝试通过第三方工具或者自主开发系统进行直播教学，加速培养了用户习惯。
+			</p>
+			  <div class="imageBox">
+				  <img src="img/image1-1.png" alt="在线教育">
+			  </div>
+		  </div>                                                                  
+		</section>                                                                
+		<section class="list-item">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-2">                                 
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+			<div class="text-title">（二）新冠危机中的生鲜电商</div> 
+			<p class="text">线上买菜需求带动个大生鲜电商用户和业务量上涨。全国多地小区采取了封闭化管理，使得用户转向线上买菜，促使生鲜电商需求呈井喷式增长，日活的平均增幅也直接由负转正。
+			</p>	 
+			  <div id="echartsBox" style="width:800px;height:600px"></div>
+			  <script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox'));
+				  
+				   var labelRight = {
+    								position: 'right'
+				  					};
+				   var option = {
+					  title: {
+        						text: '2019&2020年春节期间生鲜电商APP平均涨幅对比',
+						        x:'center',
+        						sublink: 'http://e.weibo.com/1341556070/AjwF2AgQm'
+    						 },
+					  tooltip: {barWidth:30,
+        						trigger: 'axis',
+								axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            									type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        									 }
+    							},
+    					grid: {
+								top: 80,
+								bottom: 30
+    						  },
+					  	xAxis: {
+        						type: 'value',
+        						position: 'top',
+        						splitLine: {
+            						lineStyle: {
+                								type: 'dashed'
+            							   		}
+        									}
+    							},
+    					yAxis: {
+        						type: 'category',
+        						axisLine: {show: false},
+        						axisLabel: {show: false},
+        						axisTick: {show: false},
+        						splitLine: {show: false},
+        						data: [2019, 2020]
+    							},
+    					series: [
+        							{
+            							name: '涨幅',
+            							type: 'bar',
+            							stack: '比例',
+            							label: {
+                								show: true,
+												formatter: '{b}'
+            									},
+            					data: [
+                						{value: -0.12, label: labelRight},
+										0.11, 
+            					  		]
+        							}
+    							]
+				  			};
+				   myChart.setOption(option);
+			  </script> 
+		</div> 
+			<div class="text-desc"></div>                                                                         
+		</section>
+		<section class="list-item" style="height: 80vh">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-3">                                  
+		  </div>                                                                  
+		  <div class="item-text">
+			  <p class="text">无接触配送是居民选择生鲜电商最关注的要素。2019年，用户在选择生鲜电商时，商品的安全性是首要看重的因素，在疫情防控期间，安全性的重要性则进一步表现为对用户无接触配送的高度重视。此外，相比商品价格，保证商品品质是更为有效的用户运营方向。</p>
+		  </div>
+		  <div id="echartsBox-one" style="width:700px;height:550px"></div>
+			  <script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-one'));
+				   var option = {
+    title: {
+        text: '疫情防控期间中国居民选择生鲜电商看重的因素',
+       left:'center',
+    		},
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['占比']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        min:0,
+        max:60,
+        type: "value",
+            boundaryGap: [0, 0.01],
+            name: "百分比(%)",
+            position: "bottom",
+            nameLocation: "end"
+
+    },
+    yAxis: {
+        type: 'category',
+        data: ['无接触配送', '商品品质', '商品丰富度', '商品价格', '种类丰富度', '商品容易购买到','食品包装', '配送时长', '可预约下单', '平台服务', ' APP涉及及体验']
+    },
+    series: [
+        {
+            name: '疫情防控期间',
+            type: 'bar',
+            data: [54.3, 49.5, 44.4, 43.7,43.5, 42.0, 38.1,33.8,32.2,27.1,4.2]
+        },
+       
+    ]
+};
+ 	myChart.setOption(option);
+			</script>
+		</section>
+		<section class="list-item" style="height: 80vh">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-3">                                  
+		  </div>                                 
+			<div id="echartsBox-two" style="width:700px;height:550px"></div>
+			<script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-two'));
+					var option = {
+    title: {
+        text: '2019年中国居民选择生鲜电商的看重因素',
+        left:'center'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['占比']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        min:0,
+        max:60,
+        type: "value",
+            boundaryGap: [0, 0.01],
+            name: "百分比(%)",
+            position: "bottom",
+            nameLocation: "end"
+
+    },
+    yAxis: {
+        type: 'category',
+        data: ['安全性', '品质', '口味', '品牌', '价格', '口碑','购买便捷性', '产地', '品类', '包装', ' 其他']
+    },
+    series: [
+        {
+            name: '2019年',
+            type: 'bar',
+            data: [55.7, 49.3, 37.2, 36.5,34.6, 28.1, 17.7,16.2,14.9,9.9,0.1]
+        },
+       
+    ]
+};
+		myChart.setOption(option);
+</script>
+		</section>
+		<section class="list-item" style="height: 100vh">                                               
+		  
+			<div class="item-image">                                                
+				<img src="img/image3.jpg" alt="img-3">                                  
+		  	</div>
+			
+		  <div class="item-text">  
+			  
+			<div class="text-title">（三）新冠危机中的互联网医疗</div>
+			  
+			<p class="text">疫情防控期间互联网医疗备受关注，用户及单量大幅增长</p>
+			  
+			<div class="imageBox"><img src="img/image3-1.png" alt="疫情防控期间O2O医药电商的订单增量情况"  height="500" width="600"></div>   
+			<div class="text-desc"></div>                                         
+		  </div>                                                                  
+		</section>
+		
+		<section class="list-item" style="height: 100vh">                                               
+		  
+			<div class="item-image">                                                
+				<img src="img/image3.jpg" alt="img-3">                                  
+		  	</div>
+			
+		  <div class="item-text">  
+			  
+			<div class="text-title">免费问诊和科普成在线医疗平台主题词</div>
+			  
+			<p class="text">疫情防控期间，国家卫生健康委鼓励医疗机构充分发挥互联网诊疗咨询服务的作用，以缓解定点医院诊疗压力，降低交叉感染风险。同时，医药电商平台也积极响应国家号召，纷纷推出在线诊疗入口，同时扩大口罩供应，保持相关商品的价格稳定。</p>
+			  
+			<div class="imageBox"><img src="img/image3-2.png" alt="疫情防控期间O2O医药电商的订单增量情况"  height="500" width="700"></div>   
+			<div class="text-desc"></div>                                         
+		  </div>                                                                  
+		</section>                       
+		
+		<section class="list-item">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-4">                                 
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+			<div class="text-title">（四）新冠危机中的餐饮行业</div>
+			  	<p class="text">　餐饮企业严重受挫，绝大多数门店关闭。原本春节是餐饮行业的黄金周，根据国家统计局，2019年全国46.721亿元的餐饮收入中，15.5%来自春节期间这一传统的消费旺季，而在今年春节期间，作为人员聚集性较强的消费场所，多数餐饮门店闭店，仅少数提供团餐服务或者单店的企业进行维持性经营，导致营收呈现断崖式下跌。而在营业收入基本“归零”的情况下，餐饮企业仍要负担人工、租金、食材损耗等开支，因此面临着巨大的资金压力。
+				</p>
+			<div id="echartsBox-three" style="width:700px;height:650px"></div> 
+			  	<script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-three'));
+				   var option = {
+    						title: {
+									text: '2020年春节期间中国餐饮企业闭店情况',
+        							left: 'center'
+    								},
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} :{d}%'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left'
+    },
+    series: [
+        {
+            name: '闭店情况',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '60%'],
+            data: [
+                {value: 73, name: '关闭旗下所有门店'},
+                {value: 8, name: '关闭旗下80%以上门店'},
+                {value: 5, name: '关闭旗下50%以上门店'},
+                {value: 7, name: '关闭旗下不到一半门店'},
+                {value: 7, name: '继续进行维持性经营'}
+            ],
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+ 					myChart.setOption(option);
+				</script>
+			</div>
+		</section>
+			
+			<section class="list-item" style="height: 90vh">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-4">                                 
+		  </div>
+			<div id="echartsBox-four" style="width:700px;height:650px"></div>
+			<script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-four'));
+					var option = {
+    title: {
+        text: '2020年春节期间中国餐饮企业营收情况',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} :{d}%'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+    },
+    series: [
+        {
+            name: '营收情况',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '60%'],
+            data: [
+                {value: 78, name: '同比损失达100%'},
+                {value: 9, name: '同比损失达90%以上'},
+                {value: 7, name: '同比损失70-90%'},
+                {value: 5, name: '同比损失70%以下'}
+            ],
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+				myChart.setOption(option);
+			  </script>
+		</section>
+			  			                                                      
+		<section class="list-item" style="height: 100vh">                                               
+		  <div class="item-image">                                                
+			<img src="img/image2.jpg" alt="img-5">                                  
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+			<div class="text-title">
+				<p class="text">部分单体/中小连锁难以捱过疫情，高标准化的大品牌将受益。我国目前共有超过800万家餐厅，其中单体小型餐饮店占比95%。综合来看，单体小型餐饮门店的成本支出较连锁门店更为灵活可控，但闭店带来的现金流压力或将使其难以捱过此次疫情。此外，中小型连锁企业也因类似的现金流压力而面临生存困境。而大型连锁门店虽然亏损程度最大，但资金周转上更具备优势，且在危机中应对措施上更具选择性，因此抗风险能力更强。
+				</p>
+			</div>
+			<div class="imageBox">
+				<img src="img/image5-3.png" alt="新冠危机中的餐饮行业"  height="500" width="1000"></div>  
+			<div class="text-desc"></div>                                         
+		  </div>                                                                  
+		</section>
+			
+		<section class="list-item">                                               
+		  <div class="item-image">                                                
+			<img src="img/image3.jpg" alt="img-5">                                  
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+			<div class="text-title">（五）新冠危机中的酒旅行业</div>
+			<p class="text">　国内外航线旅客量持续下滑，酒旅市场因疫遇冷。2020年春节期间，为抗击疫情，居民减少出行，使得国内航线和国际航线全市场旅客量均呈现同比下降的态势，且国内航线所受冲击相对更大。同时酒旅APP也出现了日活数量下降的情况，进一步验证了疫情对酒旅行业所带来的负面影响。
+			</p>
+			<div id="echartsBox-five" style="width:700px;height:650px"></div> 
+			  	<script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-five'));
+				   var option = {
+    title: {
+        text: '2020年春节前后国内及国际航线全市场旅客量的同比变化情况'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {x: "center",
+        y: "bottom",
+        data: ['国内航线同比增长（%）', '国际航线同比增长（%）']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '4%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        name:'日',
+        data: [ '1/22', '1/23', '1/24','1/25','1/26','1/27','1/28']
+    },
+    yAxis: { min: -80,
+            max:80,
+        type: 'value'
+    },
+    series: [
+        {
+            name: '国内航线同比增长（%）',
+            type: 'line',
+            stack: '占比',
+            data: [15,0,-40,-50,-44,-40,-51]
+        },
+        {
+            name: '国际航线同比增长（%）',
+            type: 'line',
+            stack: '占比',
+            data: [30, 21, -4, -18,-25, -27, -30]
+        }
+    ]
+};
+ 					myChart.setOption(option);
+				</script>
+			</div>
+		</section>
+			
+		<section class="list-item" style="height: 100vh">                                               
+		  <div class="item-image">                                                
+			<img src="img/张玲7.jpg" alt="img-4">                                 
+		  </div>
+			<div id="echartsBox-six" style="width:750px;height:600px"></div>
+			<script type="text/javascript">
+				   var myChart = echarts.init(document.getElementById('echartsBox-six'));
+					var option = {
+    title: {
+        text: '2020年疫情防控期间酒旅APP日均独立设备数',
+		left:'center'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {x: "center",
+        y: "bottom",
+        data: ['飞猪旅行（万台）', '去哪儿旅行网（万台）', '携程旅行（万台）']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            name:'日',
+            data: ['1/6-1/12', '1/13-1/19', '1/20-1/26', '1/27-2/2', '2/3-2/9', '2/10-2/16', '2/17-2/23']
+        }
+    ],
+    yAxis: [
+        {    min:0,
+             max:1500,
+             type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '飞猪旅行（万台）',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            data: [355, 345,310, 290, 280,300, 290]
+        },
+        {
+            name: '去哪儿旅行网（万台）',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            data: [205,225, 200, 180,150, 150, 150]
+        },
+        {
+            name: '携程旅行（万台）',
+            type: 'line',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            },
+            areaStyle: {},
+            data: [760, 780, 660,580, 540, 510,530]
+        }
+    ]
+};
+				myChart.setOption(option);
+			  </script>
+		</section>                                                  
+			
+		<section class="list-item">                                               
+		  <div class="item-image">                                                
+			<img src="img/image1.jpg" alt="img-5">                                  
+		  </div>                                                                  
+		  <div class="item-text">                                                 
+				<p class="text" >
+					头部商旅公司恢复能力更强，行业洗牌被加速酒旅行业利润率低，疫情带来了较大负面冲击并加速了行业内洗牌，使得资源将进一步向龙头靠拢。商旅市场作为刚需将相对较快复苏，大型商旅平台和商务酒店将随之逐渐有所恢复；包含本地及周边旅游市场也因疫情好转及景区场所逐渐开放而开始复苏；但长线的恢复确定性较不明朗；而因疫情扩散，出境游市场或将在较长时间内无法恢复至节前正常水平。
+				</p> 
+			<div class="imageBox">
+				<img src="img/image6-2.png" alt="在线教育" style="width: 1000px;height:650px">
+			</div> 
+			  <div class="top">
+				  <a href="#top">
+					  <img src="img/返回顶部.png" alt="返回顶部" style="width: 30px;height: 30px">
+					  <p class="top">返回顶部</p>
+				  </a>
+			  </div>
+		  </div>
+		</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+body,h2,h3{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family:"Songti SC";
+}
+a{
+    text-decoration: none;
+}
+ 
+/*导航头*/
+.header{
+    background-color: #f7f7f7f7;
+    border: 1px solid aliceblue;
+}
+ 
+.header_wrap{
+    height: 80px;
+    width: 1200px;
+    position: relative;
+    border: 1px solid aliceblue;
+    margin: 0 auto;
+}
+.header_logo{
+    border: 1px solid aliceblue;
+    width: 180px;
+    height: 40px;
+    line-height: 38px;
+    text-indent: 50px;
+    font-size: 20px;
+    color: #07111b;
+    background: url("../img/中国.png") left center no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    left: 20px;
+}
+.header_nav{
+    position: absolute;
+    right: 20px;
+    height: 38px;
+    line-height: 38px;
+    top: 50%;
+    margin-top: -19px;
+}
+ 
+.header_nav-item{
+    color: #292f35;
+    font-size: 14px;
+    display: block;
+    height: 38px;
+    width: 60px;
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+}
+ 
+.header_nav-item_custom_button{
+    background-color: #000;
+    color: #f4f4f5;
+    text-align: center;
+    width:60px;
+    border-radius: 3px;
+}
+ 
+/*动画----------------------------------------------*/
+/*此样式通过js加载到.header+.header_status_black 上*/
+.header_status_black{
+	/*添加动画过渡时间*/
+    transition: all 1s;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:3; 
+ }
+ /*此样式通过js加载到.header_nav-item+.item_color上*/
+ .item_color{
+ 	/*添加动画过渡时间*/
+ 	transition: all 2s;
+ 	color: #F4F4F5;
+ 	font-size: 17px;
+ }
+

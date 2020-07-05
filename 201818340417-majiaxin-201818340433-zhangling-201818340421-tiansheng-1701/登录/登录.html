@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ch">
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+	<link rel="stylesheet" href="css/1.css"/>
+	<link rel="stylesheet" href="css/header.css" />
+</head>
+
+<body>
+	<header class="header" id="header">
+    <div class="header_wrap">
+        <div class="header_logo">疫情下的中国</div>
+        <nav class="header_nav">
+            <a href="../index.html" class="header_nav-item ">首页</a>
+            <a href="../农业/index.html" class="header_nav-item">农业</a>
+            <a href="../工业/index.html" class="header_nav-item">工业</a>
+            <a href="javascript:void(0)" class="header_nav-item">商业</a>
+            <a href="../登录/登录.html" class="header_nav-item header_nav-item_custom_button">登录</a>
+        </nav>
+    </div>
+</header>
+ 
+<div style="height: 1000px">
+	<div class="content">
+  <div class="login-wrap">
+    <form id="user_login" action="">
+      <h3>登 录</h3>
+      <input class="name" name="" id="accountName" type="text" placeholder="请输入用户名">
+      <input class="code" name="password" id="password" type="password" placeholder="请输入密码">
+      <div class="btn">
+        <input type="button" id="submit" class="submit" value="登录" onclick="return check(this.form);">
+        <input type="reset" id="reset" class="reset" value="重置" >
+      </div>
+        <div id="CheckMsg" class="msg"></div>
+    </form>
+	  </div>
+  </div>
+	<script type="text/javascript">
+	window.onscroll=function(){
+		var top=document.documentElement.scrollTop;
+		var heade=document.getElementById("header");
+		var items=document.getElementsByClassName("header_nav-item");//获取全部的eader_nav-item
+		// 通过JS为heade和全部的item加上和去除样式
+		if(top>70){//加上的样式
+		   heade.classList.add("header_status_black");
+		   for (var i = 0; i < items.length; i++) {
+		   	items[i].classList.add("item_color"); 
+		   }
+		}else{//清除加上的样式
+		   heade.classList.remove("header_status_black");  
+		    for (var i = 0; i < items.length; i++) {
+		   	items[i].classList.remove("item_color"); 
+		   }
+		}
+	}
+</script>
+</div>
+</body>
+</html>

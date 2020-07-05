@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+/*背景覆盖*/
+		.backimage{border: 1px solid;
+		width:auto;
+		height: 1080px;
+		background-repeat: no-repeat;
+		background-image: url(../img/background.jpg);
+		margin: auto;
+		background-position: center;
+		background-attachment: fixed;
+		background-size:100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		overflow-x:hidden;
+		overflow-y:auto;}
+		*{padding: 0;
+		 margin: 0;}  /* 先重置一下html，消除HTML标签默认的内外边距 */ 
+		-->
+	
